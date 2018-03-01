@@ -12,7 +12,7 @@ const Avatar = styled.Image`
 
 const Container = styled.View`
   align-items: center;
-  backgroundcolor: ${p => (p.email === USER_EMAIL ? 'red' : 'blue')};
+  background-color: ${p => (p.email === USER_EMAIL ? 'red' : 'blue')};
   flex-direction: row;
   justify-content: flex-end;
 `

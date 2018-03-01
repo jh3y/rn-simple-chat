@@ -1,7 +1,7 @@
 Try adding as many as these features as you can manage:
 
 [x] Update to ES6 Classes instead of function components
-[ ] Use FlatList to display messages
+[x] Use FlatList to display messages
 [ ] Make messages grow for larger text
 [ ] Add Text Field on button to enter chat messages into the chat
 [ ] Align your messages to the right and everyone else to the left
