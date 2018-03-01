@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Image } from 'react-native'
 import PropTypes from 'prop-types'
 import GravatarApi from 'gravatar-api'
 import ChatMessageType from 'rn-simple-chat/App/Types/ChatMessage.type'
+import { USER_EMAIL } from 'rn-simple-chat/App/Constants/app.constants'
 import {
   Avatar,
   Container,
@@ -23,8 +24,12 @@ class ChatMessage extends Component {
 
     return (
       <Container email={email}>
+        { email !== USER_EMAIL ?
+          <Avatar source={{ uri: avatarUrl }} />
+          :
+          null
+        }
         <Message>{message}</Message>
-        <Avatar source={{ uri: avatarUrl }} />
       </Container>
     )
   }
