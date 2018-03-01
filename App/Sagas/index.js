@@ -8,19 +8,25 @@ const emails = [
   'steve@jobs.com',
   'hello@world.com',
   'foo@bar.com',
+  'me@test.com',
 ]
 
 function* addChatsSaga() {
-  while (true) {
-    yield delay(5000)
-    const email = emails[Math.floor(Math.random()*emails.length)];
+  let i = 1
+  // Instead of while(true) limit to 5 so can work with static
+  chats = []
+  // while (i < 5) {
+  // const email = emails[Math.floor(Math.random()*emails.length)];
+  for (let email of emails.sort()) {
+    yield delay(1000)
     yield put({
       type: 'ADD_MESSAGE',
       user_email: email,
-      message: lorem({
-      }),
+      message: lorem({}),
     })
   }
+  // i++
+  // }
 }
 
 export default addChatsSaga
