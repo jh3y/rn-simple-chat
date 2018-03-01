@@ -8,6 +8,7 @@ import {
   Avatar,
   Container,
   Message,
+  MessageWrapper,
 } from './chatmessage.style'
 
 class ChatMessage extends Component {
@@ -29,7 +30,9 @@ class ChatMessage extends Component {
           :
           null
         }
-        <Message>{message}</Message>
+        <MessageWrapper email={email}>
+          <Message>{message}</Message>
+        </MessageWrapper>
       </Container>
     )
   }

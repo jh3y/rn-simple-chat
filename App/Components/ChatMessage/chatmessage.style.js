@@ -8,12 +8,10 @@ const Avatar = styled.Image`
   border-width: 3;
   height: ${avatarSize};
   width: ${avatarSize};
-  align-self: flex-start;
 `
 
 const Container = styled.View`
   align-items: center;
-  background-color: ${p => (p.email === USER_EMAIL ? 'red' : 'blue')};
   flex-direction: row;
   align-self: ${p => (p.email === USER_EMAIL) ? 'flex-end' : 'flex-start'};
   min-height: 40;
@@ -25,9 +23,19 @@ const Container = styled.View`
 `
 
 const Message = styled.Text`
-  flex-direction: row;
-  justify-content: flex-end;
   align-items: center;
+  color: #ffffff;
+  flex-direction: row;
 `
 
-export { Avatar, Container, Message }
+const MessageWrapper = styled.View`
+  background-color: ${p => (p.email === USER_EMAIL ? '#2eec71' : '#bdc3c7')};
+  padding-top: 10;
+  padding-right: 10;
+  padding-bottom: 10;
+  padding-left: 10;
+  margin-left: 5;
+  border-radius: 5;
+`
+
+export { Avatar, Container, Message, MessageWrapper }
